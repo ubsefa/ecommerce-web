@@ -22,7 +22,7 @@ class Application
             $user->birthDate = "1979-09-01 12:00:00";
             $user->mobile = "5308340647";
             $user->admin = "b1";
-            $user->roles = join(",", array_keys(ADMIN_ROLES));
+            $user->roles = join(",", array_keys(USER_ADMIN_ROLES));
             $user->active = "b1";
             $authRepository = new \Repositories\AuthRepository;
             $authRepository->signUp($user);

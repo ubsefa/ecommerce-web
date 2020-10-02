@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+  RewriteRule ^([0-9a-zA-Z-_/]+)$ index.php [QSA]
+</IfModule>

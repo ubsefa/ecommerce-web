@@ -6,6 +6,16 @@ class LoginController extends \Libraries\Controller
 {
     public function indexAction()
     {
+        $json = file_get_contents("php://input");
+        $data = json_decode($json, true);
+        $validation = new \Libraries\Validation;
+        $email = '';
+        $validation->name('email')->value($data["email"] || $_POST["email"])->pattern('email', 'Hatalı e-posta!')->required('Boş bırakamazsını!');
+        if ($validation->isSuccess()) {
+            echo "Validation ok!";
+        } else {
+            var_dump($validation->getErrors());
+        }
         $this->render("pages/admin/signin.html",
             [
                 "logo" => $this->model["settings"]->logo,

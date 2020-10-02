@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 text-right">
-                            <button type="submit" class="btn btn-primary mt-2">Sign In</button>
+                            <button id="buttonLogin" type="button" class="btn btn-primary mt-2">Sign In</button>
                         </div>
                     </div>
 
@@ -117,7 +117,7 @@
     <!-- Theme Base, Components and Settings -->
     <script src="<?php echo $themeUrl ?>/js/theme.js"></script>
     <!-- Theme Custom -->
-    <script src="<?php echo $themeUrl ?>/js/custom.js"></script>
+    <script src="<?php echo $themeUrl ?>/js/custom.js?version=<?php echo uniqid() ?>"></script>
     <!-- Theme Initialization Files -->
     <script src="<?php echo $themeUrl ?>/js/theme.init.js"></script>
 </body>

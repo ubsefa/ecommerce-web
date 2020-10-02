@@ -91,7 +91,7 @@ class Controller
 
     private function getBearerToken()
     {
-        $headers = getAuthorizationHeader();
+        $headers = $this->getAuthorizationHeader();
         if (!empty($headers)) {
             if (preg_match("/Bearer\s(\S+)/", $headers, $matches)) {
                 return $matches[1];
